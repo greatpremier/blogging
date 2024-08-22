@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../144-firestore-group-chat-master"
+		},
+		{
+			"path": "../jessie-megachat"
+		},
+		{
+			"path": "../../react-apps/webpage"
+		},
+		{
+			"path": "../../react-apps/react-test"
+		},
+		{
+			"path": "../../react-apps/greatpremier"
+		},
+		{
+			"path": "../../OneDrive/Desktop/premierjessie-devs"
+		},
+		{
+			"path": "../../Downloads/QuickStart/QuickStart"
+		}
+	],
+	"settings": {}
+}
