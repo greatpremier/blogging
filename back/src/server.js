@@ -19,15 +19,18 @@ connectDB();
 app.use(express.json());
 
 // Routes
-//app.use('/api/auth', authRoutes);
+app.use('/api/auth', authRoutes);
 app.use('/api/blogs', blogRoutes);
-//app.use('/api/comments', commentRoutes);
+app.use('/api/comments', commentRoutes);
 
 // Error handling middleware
-//app.use(errorMiddleware);
+//app.use('/api/error', errorMiddleware);
 
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+app.get('/', (req, res) => {
+  res.send('<h1>Welcome to serevr</h1>')
+})

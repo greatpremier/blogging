@@ -1,13 +1,21 @@
 const express = require('express');
-const { authMiddleware } = require('../middleware/authMiddleware');
-const { getAllBlogs, createBlog } = require('../controllers/blogController');
-
 const router = express.Router();
+const {
+  getBlogPosts,
+  getBlogPostById,
+  createBlogPost,
+  updateBlogPost,
+  deleteBlogPost,
+} = require('../controllers/blogController');
+const { protect } = require('../middleware/authMiddleware');
 
-// GET all blogs
-router.get('/', getAllBlogs);
+router.route('/')
+  .get(getBlogPosts)
+  .post(protect, createBlogPost);
 
-// POST new blog (requires authentication)
-router.post('/', authMiddleware, createBlog);
+router.route('/:id')
+  .get(getBlogPostById)
+  .put(protect, updateBlogPost)
+  .delete(protect, deleteBlogPost);
 
 module.exports = router;
