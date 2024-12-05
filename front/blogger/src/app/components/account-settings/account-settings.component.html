@@ -1,1 +1,54 @@
-<p>account-settings works!</p>
+<mat-sidenav-container class="app-container">
+    <!-- Sidebar -->
+    <mat-sidenav mode="side" opened class="sidenav">
+      <mat-card class="profile-card">
+        <img mat-card-avatar src="profile-pic.jpg" alt="Profile Picture">
+        <mat-card-content>
+          <h3>{{ username }}</h3>
+          <p>{{ followers }} Followers</p>
+          <p>{{ tweets }} Tweets</p>
+        </mat-card-content>
+      </mat-card>
+  
+      <mat-list>
+        <mat-list-item>
+          <mat-icon>person</mat-icon>
+          <span>Who to follow</span>
+        </mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+  
+    <!-- Main Content -->
+    <mat-sidenav-content class="main-content">
+      <mat-toolbar color="primary">
+        <span>Home</span>
+      </mat-toolbar>
+  
+      <div class="feed">
+        <mat-card class="post">
+          <mat-card-header>
+            <mat-card-title>Elon Musk</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Let's set an age limit after which you can't run for office...</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-icon-button><mat-icon>thumb_up</mat-icon></button>
+            <button mat-icon-button><mat-icon>comment</mat-icon></button>
+            <button mat-icon-button><mat-icon>share</mat-icon></button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </mat-sidenav-content>
+  
+    <!-- Right Sidebar (Trending) -->
+    <div class="trending">
+      <mat-list>
+        <mat-list-item>
+          <mat-icon>trending_up</mat-icon>
+          <span>Trending Topic #1</span>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </mat-sidenav-container>
+  
